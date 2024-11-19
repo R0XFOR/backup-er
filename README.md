@@ -9,8 +9,8 @@ Simple backup bat script for Windows/Linux
 #### Linux:
 ###### Debian for example
 ```
-apt install 7zip
-apt install openssl
+sudo apt install 7zip
+sudo apt install openssl
 ```
 
 ### Usage:
