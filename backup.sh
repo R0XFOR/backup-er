@@ -1,6 +1,6 @@
 #!/bin/bash
 
-password="IaPhotograph"
+password="<PLACE PASSWORD HERE>"
 backup_file_extension=".enc"
 compression=0
 
