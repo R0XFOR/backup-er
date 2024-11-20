@@ -13,6 +13,10 @@ set "HH=%dt:~8,2%" & set "Min=%dt:~10,2%" & set "Sec=%dt:~12,2%"
 
 set "fullstamp=%DD%-%MM%-%YYYY%_%HH%-%Min%-%Sec%"
 
+if %input_file% == "" (
+	exit /b 0
+)
+
 if %input_file_extension% == %backup_file_extension% (
 	echo Decrypt
 	openssl aes-256-cbc -d -nosalt -k %password% -in %input_file% -out "backup.zip"
