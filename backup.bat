@@ -14,6 +14,7 @@ set "HH=%dt:~8,2%" & set "Min=%dt:~10,2%" & set "Sec=%dt:~12,2%"
 set "fullstamp=%DD%-%MM%-%YYYY%_%HH%-%Min%-%Sec%"
 
 if %input_file% == "" (
+	echo ERROR: Empty filepath
 	exit /b 0
 )
 

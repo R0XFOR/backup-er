@@ -1,7 +1,7 @@
 #!/bin/bash
 
 password="<PLACE PASSWORD HERE>"
-backup_file_extension=".enc"
+backup_file_extension="enc"
 compression=0
 
 
@@ -11,7 +11,7 @@ filename="${filename%.*}"
 
 timestamp=$(date +%d-%m-%Y_%H-%M-%S)
 
-if [ $extension = "enc" ]
+if [ $extension = $backup_file_extension ]
 then
 	echo "Decrypt"
         openssl aes-256-cbc -d -nosalt -k "$password" -in "$1" -out "backup.zip"
@@ -20,7 +20,7 @@ then
 else
 	echo "Encrypt"
         7z a -mx$compression backup.zip "$1"
-        openssl aes-256-cbc -e -nosalt -k "$password" -in "backup.zip" -out "backup $timestamp$backup_file_extension"
+        openssl aes-256-cbc -e -nosalt -k "$password" -in "backup.zip" -out "backup $timestamp.$backup_file_extension"
         rm backup.zip
 fi
 
