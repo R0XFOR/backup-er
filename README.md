@@ -5,6 +5,8 @@ Simple backup bat script for Windows/Linux
 #### Windows:
 **[7zip](https://www.7-zip.org/)**
 **[openssl](https://slproweb.com/products/Win32OpenSSL.html)**
+> [!IMPORTANT]
+> Make sure that the paths to the 7-Zip and OpenSSL executable files are included in the Windows **PATH** environment variable.
 
 #### Linux:
 ###### Debian for example
